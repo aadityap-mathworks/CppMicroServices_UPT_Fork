@@ -44,9 +44,10 @@ class BundleInstallFixture : public ::benchmark::Fixture
     InstallWithCppFramework(benchmark::State& state, std::string const& bundleName)
     {
     
-        Blah blah;
-        
-        
+
+		throw std::runtime_error("An error occurred in myFunction");
+
+
         using namespace std::chrono;
         using namespace cppmicroservices;
 
