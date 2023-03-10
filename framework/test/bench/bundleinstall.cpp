@@ -43,6 +43,10 @@ class BundleInstallFixture : public ::benchmark::Fixture
     void
     InstallWithCppFramework(benchmark::State& state, std::string const& bundleName)
     {
+    
+        Blah blah;
+        
+        
         using namespace std::chrono;
         using namespace cppmicroservices;
 
