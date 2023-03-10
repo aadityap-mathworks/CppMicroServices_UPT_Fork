@@ -46,7 +46,13 @@ class BundleInstallFixture : public ::benchmark::Fixture
     
 
 		throw std::runtime_error("An error occurred in myFunction");
-
+	  } catch (std::exception& e) {
+		// handle the exception
+		std::string errorMessage = "Caught exception: ";
+		errorMessage += e.what();
+		// print the error message
+		std::cerr << errorMessage << std::endl;
+	  }
 
         using namespace std::chrono;
         using namespace cppmicroservices;
